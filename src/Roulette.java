@@ -10,7 +10,7 @@ public class Roulette {
     public void playGame(Player player, Scanner scanner) {
         System.out.println("Välkommen till Rouletten! Ditt saldo är: " + player.getSaldo());
         System.out.println("Hur mycket vill du satsa?");
-        int rouletteBet = scanner.nextInt();
+        double rouletteBet = scanner.nextInt();
         scanner.nextLine();
 
         if (rouletteBet > player.getSaldo()) {
@@ -32,9 +32,10 @@ public class Roulette {
         }
     }
 
-    public void bet(String choice, int rouletteBet, Player player){
+    public void bet(String choice, double rouletteBet, Player player){
         Random random = new Random();
         int rouletteNumber = random.nextInt(3);
+        player.setSaldo(player.getSaldo() - rouletteBet);
 
         if ((choice.equalsIgnoreCase("rött") && rouletteNumber == 1) ||
                 (choice.equalsIgnoreCase("svart") && rouletteNumber == 2)) {
@@ -43,8 +44,6 @@ public class Roulette {
             player.setSaldo(player.getSaldo() + vinst);
         } else {
             System.out.println("Tyvärr, du förlorade.");
-            player.setSaldo(player.getSaldo() - rouletteBet);
         }
-        System.out.println("Du har " + player.getSaldo() + " kvar att spela för.");
     }
 }
