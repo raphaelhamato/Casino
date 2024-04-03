@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// Use case:
 // Välkommen till Scam onlinecasinot!
 // Skriv ditt namn:
 // Hej namn!
