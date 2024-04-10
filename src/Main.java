@@ -1,26 +1,5 @@
 import java.util.Scanner;
 
-// Use case:
-// Välkommen till Scam onlinecasinot!
-// Skriv ditt namn:
-// Hej namn!
-// Välj vad du vill göra genom att fylla i ett nummer:
-//      1. Spela Wheel of Fortune
-//            Välkommen till Wheel of fortune! Ditt saldo är:
-//            Hur mycket vill du satsa?
-//            Startar spelet och snurrar hjulet.
-//            Du vann x kr.
-//            Du förlorade. (Tillbaks till huvudmenyn)
-//
-//      2. Spela Roulette
-//            Välkommen till Roulette! Ditt saldo är:
-//            Hur mycket vill du satsa?
-//            Vill du satsa på rött eller svart?
-//            Startar spelet och snurrar hjulet.
-//            Du vann x kr.
-//            Du förlorade. (Tillbaks till huvudmenyn)
-//      3. Avsluta
-
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
